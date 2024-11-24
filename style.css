@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-
 }
 
 body {
@@ -8,10 +7,6 @@ body {
     font-family: sans-serif;
     margin: 10vh;
     padding: 0;
-    
-    
-    
-    
 }
 
 .container {
@@ -19,9 +14,9 @@ body {
     min-height: 150px;
     width: 720px;
     margin: 100px auto;
-    border-radius:  6px 6px 200px;
+    border-radius: 6px 6px 200px;
     padding: 20px;
-    box-shadow: 1px 1px 1px 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     justify-content: center;
     align-items: center;
 }
@@ -30,70 +25,65 @@ body {
     font-size: 26px;
     text-align: center;
     box-shadow: 0px 2px #faeded;
-;    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
     padding: 5px;
 }
 
 .block {
-    
     width: 135px;
     padding: 5px 20px;
     margin-left: 20px;
     display: inline-block;
 }
 
-
-
 input[type="text"] {
-    width: 100%; /* Full width of the block */
-    padding: 8px; /* Padding for better touch */
-    border: 1px solid #ebcece86; /* Border style */
-    border-radius: 4px; /* Rounded corners */
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ebcece86;
+    border-radius: 4px;
 }
 
 input.small-input {
-    width: 70px; /* Set a smaller width for the month input */
+    width: 70px;
     color: #fa2003;
 }
 
-.block2{
+.block2 {
     display: flex;
     justify-content: center;
-    
 }
-.line{
+
+.line {
     height: 1px;
     width: 550px;
     background-color: gray;
     align-items: center;
     margin-top: 30px;
-} 
+}
 
 .arrow-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 55px; /* Increase button size as needed */
-    height: 55px; /* Increase button size as needed */
-    font-size: 3rem; /* Make the arrow significantly larger */
-    color: white; /* Arrow color */
-    background-color: #cf01a3; /* Button background color */
-    border: none; /* Remove default border */
-    border-radius: 70%; /* Make it circular */
+    width: 55px;
+    height: 55px;
+    font-size: 3rem;
+    color: white;
+    background-color: #cf01a3;
+    border: none;
+    border-radius: 70%;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better appearance */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 .arrow-button:hover {
-    background-color: #0e0d0e; /* Darker blue on hover */
+    background-color: #0e0d0e;
 }
 
 .arrow-button:active {
-    background-color: #470158; /* Even darker when pressed */
-    
+    background-color: #470158;
 }
-
 
 .error-message {
     color: red;
@@ -102,53 +92,71 @@ input.small-input {
 }
 
 #age-results {
-    text-align: center; /* Center everything */
+    text-align: center;
     font-family: "Poppins", sans-serif;
-    display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Stack items vertically */
-   /*  justify-content: center;  Center items vertically */
-   /* align-items: center; Align items horizontally */
-    gap: 0px; /* Add space between each group */
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
     margin: 20px;
     line-height: 85px;
 }
 
-
 .result-group {
-    display: flex; /* Align number and label inline */
-    align-items: center; /* Align number and label vertically */
+    display: flex;
+    align-items: center;
 }
 
 .result-group h1 {
-    font-size: 4rem; /* Make the numbers big */
-    color: #0c0c0c; /* Dark text for contrast */
-    margin: 0; /* Remove default margin */
+    font-size: 4rem;
+    color: #0c0c0c;
+    margin: 0;
 }
 
 .result-group span {
-    font-size: 5rem; /* Make labels slightly smaller */
-    color: black; /* Slightly lighter color for l abels */
+    font-size: 5rem;
+    color: black;
     font-weight: bold;
-
 }
 
-
-
-/* Responsive Design for Large Screens */ 
+/* Mobile Responsive Design */
 @media (max-width: 800px) {
     .container {
-        width: 100%;
+        width: 130%;
         padding: 10px;
+        margin: 20px auto; /* Adjusted to prevent large margins */
     }
     .block {
         width: 100%;
         margin: 10px 0;
     }
-} 
- /* Responsive Design for Small Screens */
+    .line {
+        width: 100%; /* Make the line responsive */
+    }
+}
+
 @media (max-width: 600px) {
     .container {
-        padding: 15px; /* Reduce padding on smaller screens */
-        border-radius: 10px; /* Slightly smaller corners */
+        width: 130%;
+        padding: 18px;
+        border-radius: 10px;
+    }
+    .base h4 {
+        font-size: 22px; /* Slightly reduce font size for smaller screens */
+    }
+    .block {
+        width: 100%;
+        margin: 10px 0;
+        padding: 8px; /* Adjust padding for better touchability */
+    }
+    .arrow-button {
+        width: 50px;
+        height: 50px;
+        font-size: 2.5rem;
+    }
+    .result-group h1 {
+        font-size: 3rem;
+    }
+    .result-group span {
+        font-size: 4rem;
     }
 }
