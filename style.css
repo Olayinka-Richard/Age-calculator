@@ -4,20 +4,26 @@
 }
 
 body {
-    background-color: #ffe6f4;
+    background-color: #fff;
     font-family: sans-serif;
-    margin: 0;
+    margin: 10vh;
     padding: 0;
+    
+    
+    
+    
 }
 
 .container {
     background-color: white;
-    min-height: 100px;
-    width: 520px;
+    min-height: 150px;
+    width: 720px;
     margin: 100px auto;
-    border-radius:  16px 16px 100px;
+    border-radius:  6px 6px 200px;
     padding: 20px;
-    box-shadow: 10px 10px 8px;
+    box-shadow: 1px 1px 1px 1px;
+    justify-content: center;
+    align-items: center;
 }
 
 .base h4 {
@@ -29,61 +35,106 @@ body {
 }
 
 .block {
+    
     width: 135px;
     padding: 5px 20px;
     margin-left: 20px;
     display: inline-block;
 }
 
+
+
 input[type="text"] {
     width: 100%; /* Full width of the block */
     padding: 8px; /* Padding for better touch */
-    border: 1px solid #ccc; /* Border style */
+    border: 1px solid #ebcece86; /* Border style */
     border-radius: 4px; /* Rounded corners */
 }
 
 input.small-input {
     width: 70px; /* Set a smaller width for the month input */
+    color: #fa2003;
 }
 
-button {
-    background-color: #af0699;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-radius: 15px;
-    margin: 0 auto;
-    align-items: center;
+.block2{
     display: flex;
     justify-content: center;
+    
+}
+.line{
+    height: 1px;
+    width: 550px;
+    background-color: gray;
+    align-items: center;
+    margin-top: 30px;
+} 
 
-
+.arrow-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px; /* Increase button size as needed */
+    height: 55px; /* Increase button size as needed */
+    font-size: 3rem; /* Make the arrow significantly larger */
+    color: white; /* Arrow color */
+    background-color: #cf01a3; /* Button background color */
+    border: none; /* Remove default border */
+    border-radius: 70%; /* Make it circular */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better appearance */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
-button:hover {
-    background-color: #5a6268;
+.arrow-button:hover {
+    background-color: #0e0d0e; /* Darker blue on hover */
 }
 
-button:focus {
-    outline: 2px solid #495057;
-
+.arrow-button:active {
+    background-color: #470158; /* Even darker when pressed */
+    
 }
+
 
 .error-message {
     color: red;
-    font-size: 14px;
+    font-size: 20px;
     text-align: center;
 }
 
-#age-result {
-    padding: 20px 10px;
-    margin-top: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
+#age-results {
+    text-align: center; /* Center everything */
+    font-family: "Poppins", sans-serif;
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+   /*  justify-content: center;  Center items vertically */
+   /* align-items: center; Align items horizontally */
+    gap: 0px; /* Add space between each group */
+    margin: 20px;
+    line-height: 85px;
 }
 
+
+.result-group {
+    display: flex; /* Align number and label inline */
+    align-items: center; /* Align number and label vertically */
+}
+
+.result-group h1 {
+    font-size: 4rem; /* Make the numbers big */
+    color: #0c0c0c; /* Dark text for contrast */
+    margin: 0; /* Remove default margin */
+}
+
+.result-group span {
+    font-size: 5rem; /* Make labels slightly smaller */
+    color: black; /* Slightly lighter color for l abels */
+    font-weight: bold;
+
+}
+
+
+
+/* Responsive Design for Large Screens */ 
 @media (max-width: 800px) {
     .container {
         width: 100%;
@@ -92,5 +143,12 @@ button:focus {
     .block {
         width: 100%;
         margin: 10px 0;
+    }
+} 
+ /* Responsive Design for Small Screens */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px; /* Reduce padding on smaller screens */
+        border-radius: 10px; /* Slightly smaller corners */
     }
 }

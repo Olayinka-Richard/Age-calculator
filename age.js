@@ -23,7 +23,7 @@ document.getElementById('age-form').addEventListener('submit', function(e) {
         return;
     }
     if (new Date(year, month - 1, day) > currentDate) {
-        errorMessage.textContent = 'Date cannot be in the future.';
+        errorMessage.textContent = 'Year cannot be in the future.';
         return;
     }
 
@@ -53,11 +53,25 @@ document.getElementById('age-form').addEventListener('submit', function(e) {
         ageMonths += 12;
     }
 
+    // Hide the "--" spans when counting starts
+    hidePlaceholders();
+
     // Animate and display results
     animateValue('years', 0, ageYears, 2000);
     animateValue('months', 0, ageMonths, 2000);
     animateValue('days', 0, ageDays, 2000);
 });
+
+// Function to hide the "--" spans
+function hidePlaceholders() {
+    const yearsSpan = document.querySelector('#years + span span');
+    const monthsSpan = document.querySelector('#months + span span');
+    const daysSpan = document.querySelector('#days + span span');
+
+    yearsSpan.style.display = 'none'; // Hide "--" for years
+    monthsSpan.style.display = 'none'; // Hide "--" for months
+    daysSpan.style.display = 'none'; // Hide "--" for days
+}
 
 // Function to animate the age values
 function animateValue(id, start, end, duration) {
@@ -67,7 +81,7 @@ function animateValue(id, start, end, duration) {
     let stepTime = Math.abs(Math.floor(duration / range));
 
     let obj = document.getElementById(id);
-    obj.style.color = '#af0699'; // Set the color here
+    obj.style.color = '#8d06ccfa'; // Set the color here
 
     let timer = setInterval(function() {
         current += increment;
@@ -77,4 +91,3 @@ function animateValue(id, start, end, duration) {
         }
     }, stepTime);
 }
-
